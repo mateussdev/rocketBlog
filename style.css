@@ -1,0 +1,154 @@
+/* GENERAL SETTINGS ========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color-home: #290742;
+  --bg-color-input: #170027;
+  --border-color: #4FFF4B;
+  --bg-color-content: #FBF6FF;
+  --secundary-color: #9E6DC2;
+
+  --title-font: 'Poppins', sans-serif;
+  --standard-font: 'Roboto', sans-serif;
+
+  font-size: 62.5%; /* 10px */
+}
+
+html, body {
+  font-family: var(--standard-font);
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  padding-inline: 13.5rem;
+  padding-block: 6.4rem;
+  margin-inline: auto;
+}
+
+/* HOME SECTION ========================= */
+#home {
+  background: var(--bg-color-home);
+
+  border-bottom: .6rem solid var(--border-color);
+}
+
+/* header */
+#home header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 6.4rem;
+
+}
+
+#home header .menu {
+  display: flex;
+  flex-direction: row;
+  gap: 3.2rem;
+
+  font-size: 1.8rem;
+}
+
+#home header .menu li a {
+  color: #fff;
+
+  transition: 300ms;
+}
+
+#home header .menu li a:hover {
+  font-weight: 700;
+  border-left: .3rem solid var(--border-color);
+  padding-left: .3rem;
+} 
+
+#home header .search {
+  display: flex;
+}
+
+#home header .search #search-input {
+  width: 23rem;
+
+  padding: 1.4rem 2.5rem;
+
+  border: none;
+  border-radius: .4rem 0 0 .4rem;
+
+  background: var(--bg-color-input);
+  color: #fff;
+}
+
+#home header .search #search-input::placeholder {
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+#home header .search button {
+  width: 7rem;
+  height: 4.4rem;
+
+  border: none;
+  border-radius: 0 .4rem .4rem 0;
+
+  background: var(--secundary-color);
+
+  cursor: pointer;
+}
+
+/* main */
+#home main {
+  display: flex;
+  gap: 3rem;
+}
+
+#home .text {
+  width: 57rem;
+}
+
+#home main .text h1 {
+  font-family: var(--title-font);
+  font-weight: 700;
+  font-size: 3.6rem;
+  line-height: 5.4rem;
+  color: var(--secundary-color);
+
+  margin-bottom: 1.6rem;
+}
+
+#home main .text p {
+  font-size: 1.8rem;
+  color: #fff;
+
+  text-align: justify;
+
+  margin-bottom: 2.4rem;
+}
+
+#home main .text #see-more {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: var(--secundary-color);
+}
+
+#home main #img-home {
+  width: 57rem;
+}
