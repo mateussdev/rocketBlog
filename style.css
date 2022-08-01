@@ -6,9 +6,9 @@
 }
 
 :root {
-  --bg-color-home: #290742;
-  --bg-color-input: #170027;
-  --border-color: #4FFF4B;
+  --primary-color: #290742;
+  --primary-color-dark: #170027;
+  --light-green: #4FFF4B;
   --bg-color-content: #FBF6FF;
   --secundary-color: #9E6DC2;
 
@@ -41,9 +41,9 @@ ul li {
 
 /* HOME SECTION ========================= */
 #home {
-  background: var(--bg-color-home);
+  background: var(--primary-color);
 
-  border-bottom: .6rem solid var(--border-color);
+  border-bottom: .6rem solid var(--light-green);
 }
 
 /* header */
@@ -73,7 +73,7 @@ ul li {
 
 #home header .menu li a:hover {
   font-weight: 700;
-  border-left: .3rem solid var(--border-color);
+  border-left: .3rem solid var(--light-green);
   padding-left: .3rem;
 } 
 
@@ -89,7 +89,7 @@ ul li {
   border: none;
   border-radius: .4rem 0 0 .4rem;
 
-  background: var(--bg-color-input);
+  background: var(--primary-color-dark);
   color: #fff;
 }
 
@@ -118,6 +118,8 @@ ul li {
 
 #home .text {
   width: 57rem;
+
+  text-align: left;
 }
 
 #home main .text h1 {
@@ -151,4 +153,92 @@ ul li {
 
 #home main #img-home {
   width: 57rem;
+}
+
+/* CONTENT SECTION ========================= */
+#content {
+  background: var(--bg-color-content);
+
+  width: 100%;
+  padding-inline: 13.5rem;
+  padding-block: 6.4rem;
+  margin-inline: auto;
+}
+
+#content main{
+  display: grid;
+  grid-template-areas: 
+  "last-post top-posts"
+  "others-posts others-posts";
+}
+
+#content main h2 {
+  color: var(--primary-color);
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+
+  margin-bottom: .8rem;
+}
+
+#content main .post-area {
+  width: 100%;
+}
+
+#content main #last-post {
+  grid-area: last-post;
+  
+  width: 57rem;
+  
+  text-align: justify;
+
+  /* margin-right: 13rem; */
+}
+
+#content main #last-post h2 {
+  margin-bottom: 1.5rem;
+}
+
+#content main #last-post #date-last-post {
+  margin-block: 1.5rem;
+}
+
+#content main .date {
+  margin-block: .8rem;
+}
+
+#content main #top-posts {
+  grid-area: top-posts;
+
+  width: 47.2rem;
+  height: 41rem;
+
+  text-align: justify;
+
+}
+
+#content main #top-posts .date:first-child {
+  margin-top: 0;
+}
+
+#content main #top-posts .divider {
+  width: 47rem;
+  height: .1rem;
+
+
+  border-top: .1rem solid #F2E7FA;
+
+  margin-block: 2.3rem;
+}
+
+#content main #others-posts {
+  grid-area: others-posts;
+  display: flex;
+  flex-direction: row;
+
+  margin-top: 6.4rem;
+}
+
+#content main #others-posts .post {
+  margin-right: 3rem;
+  width: 37rem;
 }
