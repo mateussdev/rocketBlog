@@ -158,18 +158,16 @@ ul li {
 /* CONTENT SECTION ========================= */
 #content {
   background: var(--bg-color-content);
-
-  width: 100%;
-  padding-inline: 13.5rem;
-  padding-block: 6.4rem;
-  margin-inline: auto;
 }
 
 #content main{
-  display: grid;
+  /* display: grid;
   grid-template-areas: 
   "last-post top-posts"
-  "others-posts others-posts";
+  "others-posts others-posts"; */
+
+  display: flex;
+  flex-direction: column;
 }
 
 #content main h2 {
@@ -180,8 +178,10 @@ ul li {
   margin-bottom: .8rem;
 }
 
-#content main .post-area {
-  width: 100%;
+#content main .post-group {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
 }
 
 #content main #last-post {
@@ -190,8 +190,6 @@ ul li {
   width: 57rem;
   
   text-align: justify;
-
-  /* margin-right: 13rem; */
 }
 
 #content main #last-post h2 {
@@ -241,4 +239,8 @@ ul li {
 #content main #others-posts .post {
   margin-right: 3rem;
   width: 37rem;
+}
+
+#content main #others-posts .post img {
+  width: 34rem
 }
